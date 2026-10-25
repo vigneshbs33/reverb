@@ -1,0 +1,36 @@
+
+# Reference-only copy of the original project. Not part of this repository.
+/_reference/
+*.iml
+.gradle/
+.gradle-user-home/
+.idea/
+.kotlin/
+local.properties
+.DS_Store
+build/
+*/build/
+captures/
+.externalNativeBuild/
+.cxx/
+out/
+build_output.txt
+build_output_2.txt
+build_error.txt
+*.jks
+*.keystore
+google-services.json
+# Ignore all legacy APKs but track v3.0.3
+android_apk_output/*.apk
+!android_apk_output/Reverb-v3.0.3.apk
+# Editor and local config
+.vscode/
+.env
+*.aab
+# Secrets and local signing config
+keystore.properties
+secrets.properties
+*.pem
+*.p12
+# Logs
+*.log
