@@ -417,7 +417,12 @@ private fun ToneMenu(
                     onClick = { onToneSelected(ReverbTone.FACT_CHECK) },
                     modifier = Modifier.weight(1f),
                 )
-                Spacer(modifier = Modifier.weight(1f))
+                ToneButton(
+                    emoji = "🎙️",
+                    label = "Speech",
+                    onClick = { onToneSelected(ReverbTone.CLEAN_SPEECH) },
+                    modifier = Modifier.weight(1f),
+                )
             }
 
             Spacer(Modifier.height(4.dp))
