@@ -28,4 +28,8 @@ enum class ReverbTone(
         title = "Promotion",
         summary = "Clear, engaging marketing message.",
     ),
+    CLEAN_SPEECH(
+        title = "Clean Speech",
+        summary = "Turns dictated speech into clean written text.",
+    ),
 }
