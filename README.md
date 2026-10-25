@@ -160,7 +160,6 @@ Unit tests cover the editor (Polish, Smart Reply, Undo, every error path) with f
 
 ## Try it
 
-1. Download [`android_apk_output/Reverb-v3.0.3.apk`](android_apk_output/Reverb-v3.0.3.apk) to an Android 10 or newer phone and install it (allow installs from your browser or file manager when asked).
 2. Open Reverb and paste your OpenAI API key.
 3. Grant **Display over other apps**, then turn Reverb on under **Settings > Accessibility > Reverb**.
 4. Open any app, type something messy in a text field, tap the Reverb bubble and pick a tone.
@@ -207,7 +206,6 @@ core/network          OpenAiWritingEngine, the default engine (pure Kotlin)
 core/prompt           Tone prompts for rewrites and replies (pure Kotlin)
 core/model            Shared types such as ReverbTone (pure Kotlin)
 core/designsystem     Theme
-android_apk_output    Ready to install APK
 Context_MD            Early product and design notes
 ```
 
