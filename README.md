@@ -7,6 +7,16 @@
 
 Reverb is a floating writing assistant for Android. It works in WhatsApp, Gmail, Slack, notes or any other app with a text box, without a custom keyboard. Under the hood an Accessibility Service reads the focused field when you tap, an LLM rewrites the text in the tone you pick, and Reverb writes the result back into the same field. One tap undoes it.
 
+## Download
+
+[**Download Reverb.apk**](https://github.com/vigneshbs33/reverb/raw/main/releases/Reverb.apk) (Android 10 or newer). Android may show an unknown developer warning because the app is installed outside the Play Store and uses the Accessibility Service; choose **Install anyway**. Reverb has no server: you add your own OpenAI compatible API key inside the app.
+
+## Built with voice for the No Hands: Wispr Challenge
+
+Reverb was built by voice with [Wispr Flow](https://wisprflow.ai) for the WeMakeDevs x Wispr Flow *No Hands* challenge (Builders track). It fixes a problem that voice dictation creates: dictated text is full of filler words, missing punctuation and run-on sentences. The **Clean Speech** tone takes a raw Wispr Flow transcript sitting in any text box and turns it into clean writing in one tap, in the same field, with one tap Undo.
+
+Dictate with Flow, tap the Reverb bubble, pick a tone, done.
+
 ## Features
 
 - **Rewrite in place.** Reads the focused text field (or only the part you selected), rewrites it, and replaces it in the same field.
@@ -161,6 +171,7 @@ Unit tests cover the editor (Polish, Smart Reply, Undo, every error path) with f
 
 ## Try it
 
+1. Install the APK from the Download link above.
 2. Open Reverb and paste your OpenAI API key.
 3. Grant **Display over other apps**, then turn Reverb on under **Settings > Accessibility > Reverb**.
 4. Open any app, type something messy in a text field, tap the Reverb bubble and pick a tone.
