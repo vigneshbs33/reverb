@@ -27,8 +27,24 @@ android {
         buildConfigField("String", "REVERB_LLM_MODEL", "\"$llmModel\"")
     }
 
+    // Release signing comes from gradle properties so no key material lives in the repo.
+    val releaseStoreFile = providers.gradleProperty("reverb.signing.storeFile").orNull
+    if (releaseStoreFile != null) {
+        signingConfigs {
+            create("release") {
+                storeFile = file(releaseStoreFile)
+                storePassword = providers.gradleProperty("reverb.signing.storePassword").get()
+                keyAlias = providers.gradleProperty("reverb.signing.keyAlias").get()
+                keyPassword = providers.gradleProperty("reverb.signing.keyPassword").get()
+            }
+        }
+    }
+
     buildTypes {
         release {
+            if (releaseStoreFile != null) {
+                signingConfig = signingConfigs.getByName("release")
+            }
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(
