@@ -10,7 +10,8 @@ Reverb is a floating writing assistant for Android. It works in WhatsApp, Gmail,
 ## Features
 
 - **Rewrite in place.** Reads the focused text field (or only the part you selected), rewrites it, and replaces it in the same field.
-- **Five tones.** Professional, Friendly, Edgy, Promo and Fact Check, from a small menu on the bubble.
+- **Six tones.** Professional, Friendly, Edgy, Promo, Fact Check and Speech, from a small menu on the bubble.
+- **Clean Speech for dictation.** Built for voice input: turn a dictated transcript into clean text by removing filler words and fixing punctuation and paragraphs.
 - **Fact Check that respects your style.** Fixes spelling, grammar and facts without changing your voice. If nothing needs fixing, Reverb says so and leaves the field alone. When it does fix something, it shows a short reason.
 - **Your own voice per tone.** Save a sample of how you write in a tone, and Reverb uses it as a style example for that tone.
 - **Smart Reply.** Copy a message you received, tap into your reply box, open Smart Reply on the bubble, and pick Accept, Decline or Clarify. Reverb writes the reply straight into that box, in your voice from your Smart Reply writing sample.
