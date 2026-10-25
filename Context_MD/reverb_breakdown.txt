@@ -1,0 +1,53 @@
+REVERB: PROJECT BREAKDOWN & TECHNICAL DEEP-DIVE (v3.0.3)
+
+Reverb is a premium AI writing companion built as a "ghost layer" for Android. It handles text polishing, tone shifting, and smart replies across any application without requiring context switching.
+
+THE TECH STACK (THE "HOW")
+
+Languages & Tools ("The Stuff")
+* Kotlin (2.0.21): Powered by the latest Kotlin 17+ bytecode and Compose Compiler.
+- Jetpack Compose (BOM 2024.10): Modern, reactive UI. Every component is built with pure Kotlin for high performance.
+- Material 3: Google's latest design system, customized for a sleek "Professional" aesthetic.
+- Retrofit & OkHttp: High-performance networking for sub-second OpenAI API responses.
+- EncryptedSharedPreferences: Uses AES-256 (Android Keystore) to secure your API keys on-device.
+- Coroutines & Flow: Non-blocking execution for a fluid, lag-free experience.
+
+Architecture
+Reverb follows a Modular Clean Architecture to ensure scalability and separation of concerns:
+* :apps:android: The primary application and system service orchestrator.
+* :core:network: Secured OpenAI API integration.
+* :core:prompt: The "brain" module that manages persona-based system instructions.
+* :core:designsystem: A unified library of premium UI components and theme tokens.
+* :feature:onboarding: Interactive, scenario-based user setup flow.
+
+CORE COMPONENTS & V3.0.3 INNOVATIONS
+
+1. The Floating Bubble (Foreground Service)
+The "magic" bubble is a ForegroundService using SYSTEM_ALERT_WINDOW. It hosts a Jetpack Compose view tree within a WindowManager, which is a non-trivial feat that ensures the UI is both reactive and stable while running outside of a standard Activity.
+
+2. Compact Grid UI & Promotion Tone (New in v3.0.3)
+To maximize screen real-estate, the Tone Menu was redesigned into a compact 2x2 grid. This keeps the interactive overlay small and out of the way of the user's keyboard.
+
+3. Instant Undo & Caching
+Reverb now caches the "original" text in the foreground service before any AI operation. If the result isn't perfect, a miniaturized icon-only Undo (↩️) button reverts the text instantly.
+
+4. Fact Check Mode (The Editor)
+Beyond tone shifts, Reverb now includes a "Fact Check" mode. It uses specific prompt engineering to fix errors without altering the user's authentic voice or vocabulary.
+
+5. Screen Context (Accessibility Service)
+Reverb uses the Accessibility API to read the active EditText node and perform ACTION_SET_TEXT replacements across 3rd party apps like WhatsApp, Slack, and Gmail.
+
+THE BUILD PIPELINE (CODE -> APK)
+
+1. Gradle Sync: Build system resolves dependencies and modular cross-references.
+2. DEX Compilation: Kotlin code is transformed into Dalvik Executable files.
+3. R8 / ProGuard: Enabled in v3.0.1+ for code shrinking, optimization, and obfuscation.
+4. APK Generation: The final signed .apk is produced in the build directory, ready for sideloading or Play Store distribution.
+
+TOOLS OF THE TRADE
+* Android Studio: For heavy-duty native development.
+* Git & GitHub: For robust version control.
+* Antigravity (Gemini): The AI engineering partner for rapid refactoring, debugging, and documentation maintenance.
+
+Reverb represents a master-class in combining low-level Android system hooks with high-level Generative AI to create a seamless, invisible user experience.
+
