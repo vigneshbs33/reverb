@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Reverb</string>
+    <string name="accessibility_service_label">Reverb Writing Assistant</string>
+    <string name="accessibility_service_description">
+        Reverb uses Accessibility to read the text in your focused field and replace it with a
+        polished version. It only reads text when you tap the Reverb bubble. No text is stored
+        on Reverb servers — it goes directly from your device to OpenAI.
+    </string>
+    <string name="notification_channel_name">Reverb Assistant</string>
+    <string name="notification_title">Reverb is active</string>
+    <string name="notification_text">Tap the ⚡ bubble in any app to polish your text.</string>
+</resources>
