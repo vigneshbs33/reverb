@@ -64,6 +64,8 @@ class ReverbPromptFactory {
                 "Write a concise, factually accurate response to the following message."
             ReverbTone.PROMOTION ->
                 "Write an engaging, positive marketing-focused response to the following message."
+            ReverbTone.CLEAN_SPEECH ->
+                "Write a clear, concise response to the following message. Sound natural."
         }
         val customLine = if (customInstruction.isNotBlank()) {
             "\nHere is an example of the user's natural writing style: '$customInstruction'. " +
@@ -107,6 +109,12 @@ class ReverbPromptFactory {
                "all_good": false,
                "corrected_text": the exact corrected text,
                "reason": a short concise explanation of what you fixed and why."""
+
+        ReverbTone.CLEAN_SPEECH ->
+            """The input is a voice transcript from dictation. Rewrite it as clean written text.
+               Remove filler words (um, uh, like, you know), false starts and accidental repeats.
+               Add correct punctuation, capitalization and paragraph breaks.
+               Keep every idea and fact the speaker gave, in their own voice. Do not add anything new."""
 
         ReverbTone.PROMOTION ->
             """Transform the following text into a clear, engaging marketing message.
