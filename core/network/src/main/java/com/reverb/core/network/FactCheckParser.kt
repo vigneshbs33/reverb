@@ -1,7 +1,7 @@
 package com.reverb.core.network
 
-import com.reverb.core.domain.engine.RewriteResult
 import com.google.gson.JsonParser
+import com.reverb.core.domain.engine.RewriteResult
 
 /**
  * Reads the JSON answer of the Fact Check tone:

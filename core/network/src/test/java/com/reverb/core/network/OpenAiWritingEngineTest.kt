@@ -1,11 +1,11 @@
 package com.reverb.core.network
 
+import com.google.gson.JsonParser
 import com.reverb.core.domain.engine.ReplyRequest
 import com.reverb.core.domain.engine.RewriteRequest
 import com.reverb.core.domain.engine.RewriteResult
 import com.reverb.core.domain.engine.WritingEngineException
 import com.reverb.core.model.ReverbTone
-import com.google.gson.JsonParser
 import kotlinx.coroutines.test.runTest
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer

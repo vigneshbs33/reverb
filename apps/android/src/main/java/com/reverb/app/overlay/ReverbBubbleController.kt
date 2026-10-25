@@ -145,7 +145,10 @@ class ReverbBubbleController(
                         onReplySelected = { tone ->
                             uiState.value = BubbleUiState.Loading
                             // Launch the ghost activity from here instead of the service!
-                            val intent = android.content.Intent(context, com.reverb.app.clipboard.GhostClipboardActivity::class.java).apply {
+                            val intent = android.content.Intent(
+                                context,
+                                com.reverb.app.clipboard.GhostClipboardActivity::class.java,
+                            ).apply {
                                 addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK or android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION)
                                 putExtra("TONE_NAME", tone.name)
                             }

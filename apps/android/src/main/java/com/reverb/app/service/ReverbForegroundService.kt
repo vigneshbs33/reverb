@@ -7,9 +7,9 @@ import android.util.Log
 import com.reverb.app.ReverbApplication
 import com.reverb.app.clipboard.GhostClipboardActivity
 import com.reverb.app.overlay.ReverbBubbleController
-import com.reverb.core.domain.ReverbEditor
 import com.reverb.core.domain.EditError
 import com.reverb.core.domain.EditResult
+import com.reverb.core.domain.ReverbEditor
 import com.reverb.core.model.ReverbTone
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
