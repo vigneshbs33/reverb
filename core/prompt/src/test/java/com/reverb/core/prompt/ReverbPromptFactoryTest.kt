@@ -37,6 +37,13 @@ class ReverbPromptFactoryTest {
     }
 
     @Test
+    fun `clean speech asks for filler removal and punctuation`() {
+        val prompt = factory.buildRewritePrompt("um so yeah the meeting is at three", ReverbTone.CLEAN_SPEECH)
+        assertTrue(prompt.systemPrompt.contains("Remove filler words"))
+        assertTrue(prompt.systemPrompt.contains("punctuation"))
+    }
+
+    @Test
     fun `promotion allows formatting`() {
         val prompt = factory.buildRewritePrompt("x", ReverbTone.PROMOTION)
         assertFalse(prompt.systemPrompt.contains("Never use markdown formatting"))
